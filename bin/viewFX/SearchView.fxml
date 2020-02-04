@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFX.SearchViewController">
+   <children>
+      <Text layoutX="75.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Person" wrappingWidth="116.13927459716797">
+         <font>
+            <Font name="Calibri Light" size="17.0" />
+         </font></Text>
+      <Text layoutX="310.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Travel Type">
+         <font>
+            <Font name="Calibri Light" size="17.0" />
+         </font></Text>
+      <Text layoutX="548.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mean of Transport">
+         <font>
+            <Font name="Calibri Light" size="17.0" />
+         </font></Text>
+      <Text layoutX="156.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommend My Travel">
+         <font>
+            <Font name="Brush Script MT Italic" size="64.0" />
+         </font>
+      </Text>
+      <Button fx:id="recommendButton" layoutX="275.0" layoutY="455.0" mnemonicParsing="false" onMouseClicked="#handleClick" text="Get Your Recommendation">
+         <font>
+            <Font name="Calibri Light" size="18.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="Shortstay" layoutX="310.0" layoutY="277.0" mnemonicParsing="false" text="Short-Stay" />
+      <CheckBox fx:id="Longstay" layoutX="311.0" layoutY="316.0" mnemonicParsing="false" text="Long-Stay" />
+      <CheckBox fx:id="Businesstravel" layoutX="311.0" layoutY="354.0" mnemonicParsing="false" text="BusinessTravel" />
+      <CheckBox fx:id="Plane" layoutX="568.0" layoutY="277.0" mnemonicParsing="false" text="Plane" />
+      <CheckBox fx:id="Train" layoutX="569.0" layoutY="315.0" mnemonicParsing="false" text="Train" />
+      <CheckBox fx:id="Car" layoutX="569.0" layoutY="354.0" mnemonicParsing="false" text="Car" />
+      <CheckBox fx:id="Cruiseship" layoutX="569.0" layoutY="392.0" mnemonicParsing="false" text="CruiseShip" />
+      <HBox layoutX="56.0" layoutY="138.0" prefHeight="100.0" prefWidth="200.0" />
+      <VBox layoutX="67.0" layoutY="265.0" prefHeight="187.0" prefWidth="198.0">
+         <children>
+            <RadioButton fx:id="defaut" mnemonicParsing="false" onMouseClicked="#handleClickDefault" prefHeight="64.0" prefWidth="134.0" text="Default">
+               <toggleGroup>
+                  <ToggleGroup fx:id="person" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="student" mnemonicParsing="false" onMouseClicked="#handleClickStudent" prefHeight="56.0" prefWidth="141.0" text="Student" toggleGroup="$person" />
+            <RadioButton id="businessman" mnemonicParsing="false" onMouseClicked="#handleClickBusinessMan" prefHeight="67.0" prefWidth="190.0" text="BusinessMan" toggleGroup="$person" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
